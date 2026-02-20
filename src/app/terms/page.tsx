@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -19,7 +18,7 @@ export default function TermsPage() {
         <h2>1. About these terms</h2>
         <p>
           These terms of service (&quot;Terms&quot;) govern your use of the{" "}
-          {siteConfig.shortName} website at <Link href="/">{siteConfig.url}</Link>{" "}
+          {siteConfig.shortName} website{" "}
           and any courses or services we provide. By using our website, you
           agree to these Terms.
         </p>

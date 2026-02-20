@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -19,8 +18,7 @@ export default function PrivacyPage() {
         <h2>1. Who we are</h2>
         <p>
           {siteConfig.legalEntityName} (&quot;we&quot;, &quot;us&quot;,
-          &quot;our&quot;) operates the website at{" "}
-          <Link href="/">{siteConfig.url}</Link>. We are committed to
+          &quot;our&quot;) operates the {siteConfig.shortName} website. We are committed to
           protecting your personal data and respecting your privacy.
         </p>
 

@@ -10,8 +10,12 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const baseUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "http://localhost:3000";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(baseUrl),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.shortName}`,
@@ -29,7 +33,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: siteConfig.url,
     siteName: siteConfig.shortName,
     title: siteConfig.name,
     description: siteConfig.description,
