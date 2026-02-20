@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Safeguarding Policy",
-  description: `${siteConfig.name} safeguarding policy — our commitment to the safety and wellbeing of young learners.`,
+  description: `${siteConfig.shortName} safeguarding policy — our commitment to the safety and wellbeing of young learners.`,
 };
 
 export default function SafeguardingPage() {
@@ -17,14 +17,14 @@ export default function SafeguardingPage() {
 
         <h2>1. Our commitment</h2>
         <p>
-          {siteConfig.name} is committed to safeguarding and promoting the
+          {siteConfig.shortName} is committed to safeguarding and promoting the
           welfare of all young people who use our services. The safety of our
           learners is our highest priority.
         </p>
 
         <h2>2. Scope</h2>
         <p>
-          This policy applies to all {siteConfig.name} staff, assessors,
+          This policy applies to all {siteConfig.shortName} staff, assessors,
           contractors, and anyone acting on our behalf. It covers all
           interactions with learners, including online course delivery,
           evidence review, and communication.
@@ -88,7 +88,7 @@ export default function SafeguardingPage() {
 
         <h2>7. Assessors</h2>
         <p>
-          All assessors working with {siteConfig.name} are required to hold an
+          All assessors working with {siteConfig.shortName} are required to hold an
           enhanced DBS check (or equivalent) and to complete safeguarding
           training. Assessors are trained to recognise signs of abuse or
           concern and know how to report them appropriately.
@@ -97,7 +97,7 @@ export default function SafeguardingPage() {
         <h2>8. Reporting concerns</h2>
         <p>
           If you have any safeguarding concerns about a young person using our
-          services, or about the conduct of any {siteConfig.name} staff or
+          services, or about the conduct of any {siteConfig.shortName} staff or
           assessor, please contact us immediately at{" "}
           <a href={`mailto:${siteConfig.supportEmail}`}>
             {siteConfig.supportEmail}

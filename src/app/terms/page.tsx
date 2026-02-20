@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: `${siteConfig.name} terms of service — the conditions for using our website and courses.`,
+  description: `${siteConfig.shortName} terms of service — the conditions for using our website and courses.`,
 };
 
 export default function TermsPage() {
@@ -19,14 +19,14 @@ export default function TermsPage() {
         <h2>1. About these terms</h2>
         <p>
           These terms of service (&quot;Terms&quot;) govern your use of the{" "}
-          {siteConfig.name} website at <Link href="/">{siteConfig.url}</Link>{" "}
+          {siteConfig.shortName} website at <Link href="/">{siteConfig.url}</Link>{" "}
           and any courses or services we provide. By using our website, you
           agree to these Terms.
         </p>
 
         <h2>2. Our services</h2>
         <p>
-          {siteConfig.name} provides online beauty skills courses designed to
+          {siteConfig.shortName} provides online beauty skills courses designed to
           align with the Duke of Edinburgh (DofE) Skills section. Our courses
           include video lessons, guided tasks, evidence submission, and
           assessor feedback.

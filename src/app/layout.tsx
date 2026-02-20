@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`,
+    template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
   icons: {
@@ -30,15 +30,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: siteConfig.url,
-    siteName: siteConfig.name,
+    siteName: siteConfig.shortName,
     title: siteConfig.name,
     description: siteConfig.description,
     images: [
       {
-        url: "/heros/hero1.png",
+        url: "/og-graph.png",
         width: 1200,
         height: 630,
-        alt: siteConfig.name,
+        alt: siteConfig.shortName,
       },
     ],
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ["/heros/hero1.png"],
+    images: ["/og-graph.png"],
   },
 };
 
