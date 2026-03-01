@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
 import { siteConfig } from "@/config/site";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -61,9 +60,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} font-sans antialiased`}>
-        <Header />
-        <main className="min-h-[calc(100vh-8rem)]">{children}</main>
-        <Footer />
+        {children}
+        <Toaster />
       </body>
     </html>
   );

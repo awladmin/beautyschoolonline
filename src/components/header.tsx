@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { UserMenu } from "@/components/auth/user-menu";
+import type { User } from "@supabase/supabase-js";
 
 const navLinks = [
   { href: "/courses", label: "Courses" },
@@ -21,20 +23,25 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-export function Header() {
+interface HeaderProps {
+  user?: User | null;
+  role?: string | null;
+}
+
+export function Header({ user, role }: HeaderProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center">
           <Image
             src="/logo.png"
             alt="Beauty School Online"
-            width={160}
-            height={50}
-            className="h-10 w-auto"
+            width={240}
+            height={75}
+            className="h-15 w-auto"
             priority
           />
         </Link>
@@ -54,9 +61,15 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Button variant="outline" size="sm" className="ml-2" asChild>
-            <Link href="/login">Login</Link>
-          </Button>
+          {user ? (
+            <div className="ml-2">
+              <UserMenu email={user.email!} role={role ?? null} />
+            </div>
+          ) : (
+            <Button variant="outline" size="sm" className="ml-2" asChild>
+              <Link href="/login">Login</Link>
+            </Button>
+          )}
         </nav>
 
         {/* Mobile navigation */}
@@ -84,15 +97,36 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
-              <div className="mt-4 border-t border-border pt-4">
-                <Button
-                  variant="outline"
-                  className="w-full"
-                  asChild
-                  onClick={() => setOpen(false)}
-                >
-                  <Link href="/login">Login</Link>
-                </Button>
+              <div className="mt-4 border-t border-border px-3 pt-4">
+                {user ? (
+                  <div className="flex flex-col gap-1">
+                    <Link
+                      href="/dashboard"
+                      onClick={() => setOpen(false)}
+                      className="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent"
+                    >
+                      Dashboard
+                    </Link>
+                    {role === "admin" && (
+                      <Link
+                        href="/admin"
+                        onClick={() => setOpen(false)}
+                        className="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent"
+                      >
+                        Admin Panel
+                      </Link>
+                    )}
+                  </div>
+                ) : (
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    asChild
+                    onClick={() => setOpen(false)}
+                  >
+                    <Link href="/login">Login</Link>
+                  </Button>
+                )}
               </div>
             </nav>
           </SheetContent>

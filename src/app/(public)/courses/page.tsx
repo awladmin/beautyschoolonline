@@ -99,7 +99,7 @@ export default function CoursesPage() {
                 </ul>
                 <div className="mt-6">
                   <Button className="w-full" size="lg" asChild>
-                    <Link href="/contact">Register Interest</Link>
+                    <Link href="/courses/bronze">Buy Now</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -178,7 +178,7 @@ export default function CoursesPage() {
                 </ul>
                 <div className="mt-6">
                   <Button className="w-full" size="lg" variant="outline" asChild>
-                    <Link href="/contact">Register Interest</Link>
+                    <Link href="/courses/silver">Buy Now</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -230,7 +230,7 @@ export default function CoursesPage() {
                 </ul>
                 <div className="mt-6">
                   <Button className="w-full" size="lg" asChild>
-                    <Link href="/contact">Register Interest</Link>
+                    <Link href="/courses/silver">Buy Now</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -309,7 +309,7 @@ export default function CoursesPage() {
                 </ul>
                 <div className="mt-6">
                   <Button className="w-full" size="lg" variant="outline" asChild>
-                    <Link href="/contact">Register Interest</Link>
+                    <Link href="/courses/gold">Buy Now</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -362,7 +362,7 @@ export default function CoursesPage() {
                 </ul>
                 <div className="mt-6">
                   <Button className="w-full" size="lg" asChild>
-                    <Link href="/contact">Register Interest</Link>
+                    <Link href="/courses/gold">Buy Now</Link>
                   </Button>
                 </div>
               </CardContent>

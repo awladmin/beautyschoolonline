@@ -49,30 +49,30 @@
 
 :root {
   --radius: 0.625rem;
-  /* Blush rose pink theme inspired by logo watercolor */
+  /* Blush pink theme based on logo #f4cfd1 */
   --background: #fffbf9;
   --foreground: #1a1a1a;
   --card: #ffffff;
   --card-foreground: #1a1a1a;
   --popover: #ffffff;
   --popover-foreground: #1a1a1a;
-  --primary: #c47d6a;
-  --primary-foreground: #ffffff;
-  --secondary: #faf0ec;
+  --primary: #e8a5a9;
+  --primary-foreground: #1a1a1a;
+  --secondary: #fae6e7;
   --secondary-foreground: #1a1a1a;
-  --muted: #faf0ec;
+  --muted: #fae6e7;
   --muted-foreground: #6b6b6b;
-  --accent: #faf0ec;
+  --accent: #fae6e7;
   --accent-foreground: #1a1a1a;
   --destructive: #dc2626;
-  --border: #f0d4ca;
-  --input: #f0d4ca;
-  --ring: #c47d6a;
-  --chart-1: #c47d6a;
-  --chart-2: #e8b4a6;
-  --chart-3: #a85d4a;
-  --chart-4: #f0d4ca;
-  --chart-5: #8b4533;
+  --border: #ebbfc1;
+  --input: #ebbfc1;
+  --ring: #e8a5a9;
+  --chart-1: #e8a5a9;
+  --chart-2: #e8a5a9;
+  --chart-3: #d4797f;
+  --chart-4: #ebbfc1;
+  --chart-5: #c05a61;
 }
 
 @layer base {
