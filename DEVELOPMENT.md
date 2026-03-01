@@ -87,6 +87,14 @@ Visit http://localhost:3000
 - **Section view** → watch videos → complete quiz → next section unlocked
 - **Admin** `/admin` → manage courses, sections, quiz questions, view users and submissions
 
+## Production Deployment Checklist (Vercel)
+
+- [ ] Add all env vars in Vercel > Settings > Environment Variables (see table in step 2)
+- [ ] Set `NEXT_PUBLIC_APP_URL` to production domain
+- [ ] Create a Stripe webhook endpoint in Stripe Dashboard pointing to `https://yourdomain.com/api/webhooks/stripe` and use that secret for `STRIPE_WEBHOOK_SECRET`
+- [ ] Switch Stripe from test to live keys
+- [ ] Update Supabase Auth redirect URLs to include production domain
+
 ## Commands
 
 | Command | Description |
